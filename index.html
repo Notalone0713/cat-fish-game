@@ -38,10 +38,9 @@
         fishY = Math.random() * canvas.height;
       }
 
-      canvas.addEventListener("click", function(e) {
-        var rect = canvas.getBoundingClientRect();
-        mouse.x = e.clientX - rect.left;
-        mouse.y = e.clientY - rect.top;
+      canvas.addEventListener("mousemove", function(e) {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
       });
 
       function gameLoop() {
