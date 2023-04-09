@@ -29,8 +29,10 @@
       }
 
       function moveFish() {
-        fishX = Math.random() * canvas.width;
-        fishY = Math.random() * canvas.height;
+        setTimeout(function() {
+          fishX = Math.random() * canvas.width;
+          fishY = Math.random() * canvas.height;
+        }, 2000); // 将1000替换为你想要的延迟时间（单位为毫秒）
       }
 
       function gameLoop() {
